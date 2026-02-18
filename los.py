@@ -127,6 +127,7 @@ def isVisible(elevations, heights) -> bool:
     # (elevations[i] will equal heights[i] there)
     for i in range(1, len(heights) - 1):
         if elevations[i] >= heights[i]:
+            print(f"Blocked at index {i}!", flush=True)
             return False
     return True
 
