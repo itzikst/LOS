@@ -28,3 +28,6 @@ If you are using VS Code:
 2. Click on the **Run and Debug** icon in the sidebar.
 3. Select **Python Debugger: Flask**.
 4. Set breakpoints in `los.py` or `main.py` by clicking to the left of the line numbers.
+
+local url: http://localhost:5174/
+remote url: https://losfe-map-js.uc.r.appspot.com/
