@@ -120,7 +120,7 @@ def line_of_sight(start, end) -> List:
         x3.append(distance)
         y3.append(elevations[i] + corrections[i])
 
-    return [x1, y1, x2, y2, x3, y3]
+    return [x2, y2, x3, y3]
 
 def isVisible(elevations, heights) -> bool:
     for i in range(len(heights)):
