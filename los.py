@@ -108,8 +108,6 @@ def line_of_sight(start, end) -> List:
         correction = calc_curvature_correction(alpha, beta)
         corrections.append(correction)
 
-    x1 = []
-    y1 = []
     x2 = []
     y2 = []
     x3 = []
@@ -117,11 +115,16 @@ def line_of_sight(start, end) -> List:
 
     for i in range(len(deltas)):
         distance = (i / 201) * dist
-        x1.append(distance)
-        y1.append(elevations[i])
         x2.append(distance)
         y2.append(heights[i])
         x3.append(distance)
         y3.append(elevations[i] + corrections[i])
 
     return [x1, y1, x2, y2, x3, y3]
+
+def isVisible(elevations, heights) -> bool:
+    for i in range(len(heights)):
+        if elevations[i] >= heights[i]:
+            return False
+    return True
+
