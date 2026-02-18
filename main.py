@@ -18,6 +18,7 @@ def lineofsight():
     start = [s_lat, s_lng]
     end = [e_lat, e_lng] 
     los = line_of_sight(start, end)
+    print(f"Calling isVisible with {len(los[1])} points...", flush=True)
     result = isVisible(los[3], los[1])
     return jsonify(result)
 

@@ -123,7 +123,9 @@ def line_of_sight(start, end) -> List:
     return [x2, y2, x3, y3]
 
 def isVisible(elevations, heights) -> bool:
-    for i in range(len(heights)):
+    # Skip the very first and last points as they are the antenna locations
+    # (elevations[i] will equal heights[i] there)
+    for i in range(1, len(heights) - 1):
         if elevations[i] >= heights[i]:
             return False
     return True
